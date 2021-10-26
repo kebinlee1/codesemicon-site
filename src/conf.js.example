@@ -1,0 +1,35 @@
+
+const region = "MY_REGION"
+
+const dev = {  
+  s3: {
+    REGION: region,
+    BUCKET: "MY_BUCKET_NAME"
+  },
+  apiGateway: {
+    REGION: region,
+    URL: "MY_API_GATEWAY_URL"
+  },
+  cognito: {
+    REGION: region,
+    USER_POOL_ID: "MY_USER_POOL_ID",
+    APP_CLIENT_ID: "MY_APP_CLIENT_ID",
+    IDENTITY_POOL_ID: "MY_IDENTITY_POOL_ID"
+  },
+  MAX_ATTACHMENT_SIZE: 5000000,
+  STRIPE_KEY: "MY_STRIPE_KEY"
+};
+
+const prod = {}
+
+const config = process.env.REACT_APP_STAGE === 'prod'
+  ? prod
+  : dev
+
+// console.log("process.env.REACT_APP_STAGE", process.env.REACT_APP_STAGE)
+
+export default {
+  MAX_ATTACHMENT_SIZE: 5000000,
+  STRIPE_KEY: "",
+  ...config
+}
