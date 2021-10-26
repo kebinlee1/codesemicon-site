@@ -1,0 +1,66 @@
+.home .header {  /* background-image: ''url(/image-header/dogs.jpg)''; */
+  background-position: 0% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white ;
+  padding: 100px 25px;  
+  text-align: center;
+}
+.home .title {font-weight: bold; font-size: 5rem}
+
+.home h2 {
+    font-size: 2rem;
+    /* background-color: #ddd; */
+    /* color: #555; */
+    background-color: steelblue;
+    color: #fff;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.slideanim {visibility:hidden;}
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;	
+    animation-duration: 1s;	
+    -webkit-animation-duration: 1s;
+    visibility: visible;			
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }	
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+}
